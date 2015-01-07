@@ -3,9 +3,14 @@ get '/' do
 end
 
 get '/volumes' do
-  @volumes = API.get_volumes
-  erb :volume_list
+  display_page 1
 end
+
+get '/volumes/:id' do |id|
+  num = id.to_i
+  display_page num
+end
+
 
 # get '/volumes/:id' do |id|
 # end

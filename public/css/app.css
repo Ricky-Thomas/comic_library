@@ -88,3 +88,14 @@
   background-color: black;
 }
 
+#prev_page_button {
+  position: fixed;
+  left:0px;
+  top:50%;
+}
+
+#next_page_button {
+  position: fixed;
+  right:0px;
+  top:50%;
+}

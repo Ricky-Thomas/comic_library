@@ -38,3 +38,5 @@ require APP_ROOT.join('config', 'database')
 
 #Sets up the API Key, I know this is bad to show on Github but am planning to learn 'dotenv' with Bunday this week.
 ComicVine::API.key = '65101a033bc7f40cb3dfdd14b1327b50b4737c08'
+
+
