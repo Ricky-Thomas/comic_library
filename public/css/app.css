@@ -99,3 +99,22 @@
   right:0px;
   top:50%;
 }
+#issue_list_container {
+  position: relative;
+  color:white;
+  width:80%;
+  margin:auto;
+  border: 2px solid rgb(61, 30, 30);
+  background-color: white;
+  text-align: center;
+}
+
+.issue_show {
+  height:12em;
+  width:8em;
+  padding:10px;
+  margin: 10px;
+  border: 2px solid rgb(61, 30, 30);
+  display:inline-block;
+  background-color: black;
+}

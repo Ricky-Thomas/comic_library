@@ -11,6 +11,35 @@ module API
     ComicVine::API.volumes
   end
 
+  def self.load_volume_issues id
+    volume = ComicVine::API.volume id
+    volume.issues
+  end
+end
 
+helpers do
+  def display_volumes_page num
+    volumes = API.get_volumes
+      (num - 1).times do
+        volumes.next_page
+      end
+    @volumes = volumes
+    @this_page = num
+    @next_page = num + 1
+    @prev_page = num - 1
+    erb :volume_list
+  end
 
+  def display_issues_page num, volume_id
+    issues = API.load_volume_issues volume_id
+      (num - 1).times do
+        volumes.next_page
+      end
+    @issues = issues
+    @this_page = num
+    @next_page = num + 1
+    @prev_page = num - 1
+    @volume_id = volume_id
+    erb :issue_list
+  end
 end

@@ -3,13 +3,25 @@ get '/' do
 end
 
 get '/volumes' do
-  display_page 1
+  display_volumes_page 1
 end
 
 get '/volumes/:id' do |id|
   num = id.to_i
-  display_page num
+  display_volumes_page num
 end
+
+get '/volumes/:volume_id/issues' do |volume_id|
+  display_issues_page 1, volume_id
+end
+
+get '/volumes/:volume_id/issues/:id' do |id, volume_id|
+  num = id.to_i
+  display_issues_page num, volume_id
+end
+
+
+
 
 # get '/issues' do |id|
 # end
