@@ -22,3 +22,4 @@ gem 'faker'
 
 gem 'debugger'
 gem 'comic_vine'
+gem 'bcrypt'
