@@ -1,5 +1,5 @@
 class Volume < ActiveRecord::Base
   belongs_to :user
-  has_many :volume_shelves
+  belongs_to :volume_shelf_volumes
   validates :name, presence: true
 end
