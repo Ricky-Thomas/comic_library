@@ -1,5 +1,6 @@
   <%= erb :'auth/_auth' %>
-<form action="/volumes">
-  <input type="submit" value="Browse Volumes">
-</form>
-
+  <% if logged_in? %>
+    <form action="/volumes">
+      <input type="submit" value="Browse Volumes">
+    </form>
+  <% end %>
