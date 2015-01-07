@@ -19,7 +19,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-
+require 'comic_vine'
 require 'debugger'
 
 # Some helper constants for path-centric logic
@@ -34,3 +34,5 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
+#Sets up the API Key, I know this is bad to show on Github but am planning to learn 'dotenv' with Bunday this week.
+ComicVine::API.key = '65101a033bc7f40cb3dfdd14b1327b50b4737c08'

@@ -21,3 +21,4 @@ gem 'shotgun'
 gem 'faker'
 
 gem 'debugger'
+gem 'comic_vine'
