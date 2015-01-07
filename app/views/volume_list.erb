@@ -1,7 +1,7 @@
 <div id="volume_list_container">
     <% @volumes.each do |vol| %>
       <div class="volume_show">
-        <div class='volume_show_img'>
+        <div class='volume_show_img'  data-volume-id="<%= vol.id %>">
           <img src="<%= vol.image['thumb_url'] %>">
         </div>
         <%= vol.name %>

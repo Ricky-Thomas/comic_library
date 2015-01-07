@@ -11,10 +11,6 @@ get '/volumes/:id' do |id|
   display_page num
 end
 
-
-# get '/volumes/:id' do |id|
-# end
-
 # get '/issues' do |id|
 # end
 
