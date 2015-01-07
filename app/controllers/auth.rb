@@ -1,7 +1,3 @@
-get '/login' do
-  redirect '/'
-end
-
 post '/login' do
   user = User.find_by(email: params[:user][:email])
   if user && user.authenticate(params[:user][:password])

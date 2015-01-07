@@ -13,6 +13,19 @@
 </head>
   <body>
     <div class="wrapper">
+      <div class="header">
+
+        <div id="top_right_nav">
+          <strong><a href="/">ComicLib</a></strong>
+          <% if logged_in? %>
+           |
+          <a href="/"><%= current_user.username %></a>
+           |
+          <a href="/logout">Logout</a>
+          <% end %>
+        </div>
+
+      </div>
         <%= yield %>
     </div>
   </body>
