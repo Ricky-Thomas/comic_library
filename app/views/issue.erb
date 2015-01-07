@@ -1,0 +1,8 @@
+<div class="issue_show">
+  <div class='issue_show_img'>
+    <% if !@issue.image.nil? %>
+    <img src="<%= @issue.image['medium_url'] %>">
+    <% end %>
+  </div>
+  <h2><%= @issue.cover_date %></h2>
+</div>

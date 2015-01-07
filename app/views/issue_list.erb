@@ -1,23 +1,8 @@
 <div id="issue_list_container">
-    <% @issues.each do |issue| %>
-      <div class="issue_show">
-        <div class='issue_show_img'  data-issue-id="<%= issue.id %>">
-          <% if issue.image == nil %>
-          <img src="<%= issue.fetch.image['thumb_url'] %>">
-          <% else %>
-          <img src="<%= issue.image['thumb_url'] %>">
-          <% end %>
-        </div>
-        <%= issue.name %>
-      </div>
-    <% end %>
+   <ul>
+      <% @issues.each do |issue| %>
+      <a href="/volumes/<%= @volume_id %>/issues/<%= issue.id %>"><li class="issue_list"><%= "#{issue.name}" %></li></a>
+      <% end %>
+    </ul>
 </div>
 
-
-<div id="prev_page_button">
-  <a href="/volumes/<%= @volume_id %>/issues/<%= @prev_page %>">Prev page</a>
-</div>
-
-<div id="next_page_button">
-  <a href="/volumes/<%= @volume_id %>/issues/<%= @next_page %>">Next page</a>
-</div>

@@ -15,6 +15,10 @@ module API
     volume = ComicVine::API.volume id
     volume.issues
   end
+
+  def self.load_issue id
+    issue = ComicVine::API.issue id
+  end
 end
 
 helpers do
@@ -23,23 +27,23 @@ helpers do
       (num - 1).times do
         volumes.next_page
       end
-    @volumes = volumes
+    @volumes = volumes.sort_by{|vol| vol.start_year }
     @this_page = num
     @next_page = num + 1
     @prev_page = num - 1
     erb :volume_list
   end
 
-  def display_issues_page num, volume_id
-    issues = API.load_volume_issues volume_id
-      (num - 1).times do
-        volumes.next_page
-      end
-    @issues = issues
-    @this_page = num
-    @next_page = num + 1
-    @prev_page = num - 1
+  def display_issues_list volume_id
+    @issues = API.load_volume_issues volume_id
     @volume_id = volume_id
     erb :issue_list
+  end
+
+  def display_issue_page id, volume_id
+    @issue = API.load_issue id
+    @issue = @issue.fetch
+    @volume_id = volume_id
+    erb :issue
   end
 end
