@@ -19,3 +19,11 @@ get '/volumes/:volume_id/issues/:id' do |id, volume_id|
   display_issue_page id, volume_id
 end
 
+get '/user/:id' do |id|
+  @id = id
+  erb :user
+end
+
+post '/volumes/:volume_id/issues/:id' do |id, volume_id|
+
+end

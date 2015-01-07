@@ -16,10 +16,10 @@
       <div class="header">
 
         <div id="top_right_nav">
-          <strong><a href="/">ComicLib</a></strong>
+          <strong>ComicLib</strong>
           <% if logged_in? %>
            |
-          <a href="/"><%= current_user.username %></a>
+          <a href="/user/<%= current_user.id %>"><%= current_user.username %></a>
            |
           <a href="/logout">Logout</a>
           <% end %>
