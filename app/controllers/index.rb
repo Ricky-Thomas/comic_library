@@ -2,8 +2,10 @@ get '/' do
   erb :index
 end
 
-# get '/volumes'
-# end
+get '/volumes' do
+  @volumes = API.get_volumes
+  erb :volume_list
+end
 
 # get '/volumes/:id' do |id|
 # end

@@ -7,4 +7,10 @@ module API
     return sorted_list.last
   end
 
+  def self.get_volumes
+    ComicVine::API.volumes
+  end
+
+
+
 end

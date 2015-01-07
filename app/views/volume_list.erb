@@ -1,0 +1,10 @@
+<div id="volume_list_container">
+    <% @volumes.each do |vol| %>
+      <div class="volume_show">
+        <div class='volume_show_img'>
+          <img src="<%= vol.image['thumb_url'] %>">
+        </div>
+        <%= vol.name %>
+      </div>
+    <% end %>
+</div>
