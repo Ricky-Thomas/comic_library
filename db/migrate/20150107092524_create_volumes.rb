@@ -8,5 +8,6 @@ class CreateVolumes < ActiveRecord::Migration
       t.string :start_year
       t.references :user
       t.timestamps
+    end
   end
 end

@@ -5,5 +5,6 @@ class CreateVolumeShelves < ActiveRecord::Migration
       t.references :volume
       t.string     :comment
       t.timestamps
+    end
   end
 end

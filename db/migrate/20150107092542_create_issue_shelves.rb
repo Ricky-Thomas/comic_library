@@ -5,5 +5,6 @@ class CreateIssueShelves < ActiveRecord::Migration
       t.references :issue
       t.string     :comment
       t.timestamps
+    end
   end
 end

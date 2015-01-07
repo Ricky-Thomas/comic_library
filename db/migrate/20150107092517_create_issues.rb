@@ -8,5 +8,6 @@ class CreateIssues < ActiveRecord::Migration
       t.string     :cover_date
       t.references :user
       t.timestamps
+    end
   end
 end
