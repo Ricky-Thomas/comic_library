@@ -1,3 +1,5 @@
 class Volume < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :user
+  has_many :volume_shelves
+  validates :name, presence: true
 end

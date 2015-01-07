@@ -1,3 +1,5 @@
 class Issue < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :user
+  has_many :issue_shelves
+  validates :name, presence: true
 end
