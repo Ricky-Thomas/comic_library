@@ -1,0 +1,19 @@
+  <% if !logged_in? %>
+          <%= display_error %>
+          <div id="login_form"><h2>Already a member? Login: </h2>
+            <form action='/login' method='POST'>
+              <input type='text' name='user[email]' placeholder="Username"><br>
+              <input type='password' name='user[password]' placeholder="Password">
+              <input type='submit' value='Login'>
+            </form>
+          </div>
+        <br><h3>~ OR ~</h3><br>
+          <div id="signup_form">
+            <form action='/signup' method='POST'>
+              <input class='login' type='text' name='user[email]' placeholder="Create Username"><br>
+              <input class='login' type='password' name='user[password]' placeholder="Password"><br>
+              <input class='login' type='password' name='password_confirm' placeholder="Confirm Password"><br>
+              <input type='submit' value='Sign Up'>
+            </form>
+          </div>
+<% end %>
