@@ -19,17 +19,3 @@ get '/volumes/:volume_id/issues/:id' do |id, volume_id|
   display_issue_page id, volume_id
 end
 
-
-
-
-# get '/issues' do |id|
-# end
-
-# get '/issues/:id' do |id|
-# end
-
-# get '/volume_shelf/:user_id' do |user_id|
-# end
-
-# get '/issue_shelf/:user_id' do |user_id|
-# end
