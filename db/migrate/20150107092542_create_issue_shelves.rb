@@ -1,8 +1,8 @@
 class CreateIssueShelves < ActiveRecord::Migration
   def change
     create_table :issue_shelves do |t|
-      t.references :user
-      t.references :issue_shelf_issue
+      t.belongs_to :user, index: true
+      t.belongs_to :issue, index: true
       t.timestamps
     end
   end

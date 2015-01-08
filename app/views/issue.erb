@@ -4,5 +4,8 @@
     <img src="<%= @issue.image['medium_url'] %>">
     <% end %>
   <h2><%= @issue.cover_date %></h2>
+    <form action='/volumes/<%= @volume_id %>/issues/<%= @issue.id %>' method='POST'>
+      <input type='submit' value='Add to my Lib'>
+    </form>
   </div>
 </div>

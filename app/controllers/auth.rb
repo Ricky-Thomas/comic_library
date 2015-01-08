@@ -25,7 +25,7 @@ post '/signup' do
     new_user.save
     session[:user_id] = new_user.id
     IssueShelf.create(user_id: new_user.id)
-    redirect("/")
+    redirect("/user/#{new_user.id}")
   else
     set_error('signup failed.')
     redirect('/')

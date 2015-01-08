@@ -1,5 +1,5 @@
 class Issue < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :issue_shelf_issues
+  has_many :issue_shelves
+  has_many :users, through: :issue_shelves
   validates :name, presence: true
 end
