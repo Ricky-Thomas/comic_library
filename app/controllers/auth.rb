@@ -24,7 +24,6 @@ post '/signup' do
   if new_user.valid? && params[:user][:password] == params[:password_confirm]
     new_user.save
     session[:user_id] = new_user.id
-    IssueShelf.create(user_id: new_user.id)
     redirect("/user/#{new_user.id}")
   else
     set_error('signup failed.')

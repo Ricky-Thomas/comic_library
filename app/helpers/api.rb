@@ -17,7 +17,7 @@ module API
   end
 
   def self.load_issue id
-    issue = ComicVine::API.issue id
+    ComicVine::API.issue id
   end
 end
 
